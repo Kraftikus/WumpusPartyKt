@@ -7,9 +7,7 @@ import dev.kord.gateway.PrivilegedIntent
 import kotlinx.coroutines.delay
 
 suspend fun main() {
-    val token = ""
-
-    val kord = Kord(token)
+    val kord = Kord(System.getenv("token"))
     val pingPong = ReactionEmoji.Unicode("\uD83C\uDFD3")
 
     kord.on<MessageCreateEvent> {
